@@ -1,0 +1,141 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #444;
+}
+
+/* Input Forms */
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* New Row Form */
+.new-row {
+    margin-top: 20px;
+}
+
+/* Adjustments to new row elements */
+.new-row label {
+    margin-top: 10px;
+}
+
+.new-row input,
+.new-row select {
+    width: 100%; /* Full width for better visibility */
+}
+
+.new-row button {
+    margin-top: 10px; /* Add some space above the button */
+    padding: 10px; /* Keep button padding consistent */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td {
+    height: 50px;
+}
+
+td input {
+    width: 90%;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Styling for exercise details */
+.exercise-details {
+    display: flex;
+    flex-direction: column; /* Aligns the description and quantity vertically */
+}
+
+.exercise-desc {
+    font-weight: bold;
+}
+
+.exercise-quantity {
+    font-size: 0.9em; /* Smaller font for quantity */
+    color: #555; /* Slightly lighter color for quantity */
+}
+/* Fixed Column Styling */
+th:first-child,
+td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #fff; /* Ensures the background remains white */
+    z-index: 10; /* Ensures it stays above other cells */
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    th, td {
+        font-size: 12px; /* Smaller font size for mobile devices */
+    }
+}
+
