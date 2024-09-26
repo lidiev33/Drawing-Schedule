@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Practice Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .completed {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Drawing Practice Scheduler</h1>
+
+        <div class="custom-exercise">
+            <h3>Add Custom Exercise</h3>
+            <label for="exercise-description">Exercise Description:</label>
+            <input type="text" id="exercise-description" placeholder="Enter exercise details">
+   <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity">
+
+            <label for="time-frame">Time Frame:</label>
+            <select id="time-frame">
+                <option value="08:00">08:00 - 08:15</option>
+                <option value="08:15">08:15 - 08:30</option>
+                <!-- More time intervals will be dynamically added here -->
+            </select>
+
+            <label for="lesson-letter">Lesson Plan:</label>
+            <select id="lesson-letter">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+ </select>
+
+            <button onclick="addCustomExercise()">Add to Schedule</button>
+        </div>
+      
+  
+
+        <div class="new-row">
+            <h3>Add New Time Interval</h3>
+            <label for="new-start-time">Start Time:</label>
+            <input type="time" id="new-start-time" required>
+
+            <label for="new-end-time">End Time:</label>
+            <input type="time" id="new-end-time" required>
+
+            <button onclick="addNewRow()">Add New Time Interval</button>
+        </div>
+
+ <div class="program-section">
+    <h3>Save or Load Program</h3>
+    <label for="program-name">Program Name:</label>
+    <input type="text" id="program-name" placeholder="Enter program name">
+    <button onclick="saveProgram()">Save Program</button>
+
+    <label for="load-program">Load Program:</label>
+    <select id="load-program">
+        <option value="">Select Program</option>
+        <!-- Options will be dynamically added here -->
+    </select>
+    <button onclick="loadProgram()">Load Program</button>
+</div>
+
+        <!-- Column selection for view -->
+        <div>
+            <label for="column-select">Select Column to View:</label>
+            <select id="column-select" onchange="filterTable()">
+<option value="all">View All</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+        </div>
+
+        <table id="schedule-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                </tr>
+            </thead>
+<tbody id="schedule-body">
+                <tr data-time="08:00">
+                    <td>08:00 - 08:15</td>
+                    <td onclick="updateQuantity(this)"></td>
+                    <td onclick="updateQuantity(this)"></td>
+                    <td onclick="updateQuantity(this)"></td>
+                    <td onclick="updateQuantity(this)"></td>
+                    <td onclick="updateQuantity(this)"></td>
+                </tr>
+                <tr data-time="08:15">
+                    <td>08:15 - 08:30</td>
+                    <td onclick="updateQuantity(this)"></td>
+                    <td onclick="updateQuantity(this)"></td>
+                    <td onclick="updateQuantity(this)"></td>
+                    <td onclick="updateQuantity(this)"></td>
+                </tr>
+                <!-- More rows can be dynamically added -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
